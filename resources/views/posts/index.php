@@ -12,5 +12,10 @@
 my-url="http://google.com"
 my-link-text="Click me to go to Google"></div>
 
+<h1>Wrong Way</h1>
+<img src="{{imgSrc}}" />
+<h1>Right way</h1>
+<img ng-src="{{imgSrc}}" />
+
 </body>
 </html>
