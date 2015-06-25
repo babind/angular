@@ -17,5 +17,38 @@ my-link-text="Click me to go to Google"></div>
 <h1>Right way</h1>
 <img ng-src="{{imgSrc}}" />
 
+<div ng-controller="EquationController">
+<input type="text"
+ng-model="equation.x"
+ng-change="change()" />
+<code>{{ equation.output }}</code>
+</div>
+
+<form name="signup_form"
+ng-controller="FormController"
+ng-submit="submitForm()" novalidate>
+<div ng-repeat="field in fields"
+ng-form="signup_form_input">
+<input type="text"
+name="dynamic_input"
+ng-required="field.isRequired"
+ng-model="field.name"
+placeholder="{{field.placeholder}}" />
+<div
+ng-show="signup_form_input.dynamic_input.$dirty &&
+signup_form_input.dynamic_input.$invalid">
+<span class="error"
+ng-show="signup_form_input.dynamic_input.$error.required">
+The field is required.Built-In Directives
+97
+</span>
+</div>
+</div>
+<button type="submit"
+ng-disabled="signup_form.$invalid"
+	Submit all
+</button>
+</form>
+
 </body>
 </html>
