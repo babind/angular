@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html ng-app>
+<html >
 <head>
 <title>Simple app</title>
 <script
 src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js">
 </script>
+<script>
+	angular.module('app',[]);
+</script>
 </head>
-@yield('content')
+
 <body>
-<input ng-model="name" type="text" placeholder="Your name">
-<h1>Hello {{ name }}</h1>
+<div ng-app='app'>
+<input  type="text" placeholder="Title ">
+{{title}}
+</div>
+
 </body>
 </html>
