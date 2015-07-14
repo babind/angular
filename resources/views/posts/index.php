@@ -1,48 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>HTML dynamic table using JavaScript</title>
-    <script type="text/javascript" src="js/app.js"></script>
-</head>
-<body onload="load()">
-<div id="myform">
-<b>Simple form with name and age ...</b>
-<table>
-    <tr>
-        <td>Name:</td>
-        <td><input type="text" id="name"></td>
-    </tr>
-    <tr>
-        <td>Age:</td>
-        <td><input type="text" id="age">
-    </tr>
-    <tr>
-        <td>Description</td>
-        <td><input type="text" id="description">
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-</table>
-</div>
-<div id="mydata">
-<b>Current data in the system ...</b>
-<table id="myTableData"  border="1" cellpadding="2">
-    <tr>
-        <td>&nbsp;</td>
-        <td><b>Name</b></td>
-        <td><b>Age</b></td>
-         <td><b>Description</b></td>
-    </tr>
-</table>
-&nbsp;
+<HTML>
+<HEAD>
+<TITLE>Dynamically add Textbox, Radio, Button in html Form using JavaScript</TITLE>
+<SCRIPT language="javascript">
+function add(type) {
 
-</div>
-<div id="myDynamicTable">
-<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
-to create a Table and add some data using JavaScript
-</div>
-</body>
-</html>
+    //Create an input type dynamically.
+    var element = document.createElement("input");
+
+    //Assign different attributes to the element.
+    element.setAttribute("type", type);
+    element.setAttribute("value", type);
+    element.setAttribute("name", type);
+
+
+    var foo = document.getElementById("fooBar");
+
+    //Append the element in page (in span).
+    foo.appendChild(element);
+
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM>
+<H2>Dynamically add element in form.</H2>
+Select the element and hit Add to add it in form.
+<BR/>
+<SELECT name="element">
+    <OPTION value="button">Button</OPTION>
+    <OPTION value="text">Textbox</OPTION>
+    <OPTION value="radio">Radio</OPTION>
+</SELECT>
+
+<INPUT type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+
+<span id="fooBar">&nbsp;</span>
+
+</FORM>
+</BODY>
+</HTML>
