@@ -1,29 +1,27 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="js/app.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/app.css">
-	</head>
 
-	<body>
-		<h1>Incredibly Basic Slider</h1>
-	<div id="slider">
-	  <a href="#" class="control_next">>></a>
-	  <a href="#" class="control_prev"><</a>
-	  <ul>
-	    <li>SLIDE 1</li>
-	    <li style="background: #aaa;">SLIDE 2</li>
-	    <li>SLIDE 3</li>
-	    <li style="background: #aaa;">SLIDE 4</li>
-	  </ul>  
-	</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>jQuery plugin: reverseText demonstration</title>
+</head>
+<body>
 
-	<div class="slider_option">
-	  <input type="checkbox" id="checkbox">
-	  <label for="checkbox">Autoplay Slider</label>
-	</div> 
+<h1>jQuery plugin: reverseText</h1>
+<p>This jQuery plugin reverses all the text in the selected nodes.</p>
 
+<ul>
+	<li>This text will be reversed</li>
+	<li>This text will not be reversed</li>
+	<li>reversed</li>
+	<li>not reversed</li>
+</ul>
 
-	</body>
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/reversetext.js"></script>
+<script type="text/javascript">
+// reverse even-numbered LI tag text
+$("ul li:even").reverseText();
+</script>
+
 </body>
 </html>
