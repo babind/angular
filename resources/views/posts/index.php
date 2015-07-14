@@ -15,6 +15,10 @@
     <tr>
         <td>Age:</td>
         <td><input type="text" id="age">
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td><input type="text" id="description">
         <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
     </tr>
     <tr>
@@ -30,6 +34,7 @@
         <td>&nbsp;</td>
         <td><b>Name</b></td>
         <td><b>Age</b></td>
+         <td><b>Description</b></td>
     </tr>
 </table>
 &nbsp;
