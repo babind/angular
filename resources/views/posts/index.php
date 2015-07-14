@@ -5,23 +5,15 @@
 <title>jQuery plugin: reverseText demonstration</title>
 </head>
 <body>
+    <div class="quizContainer">
+         <h1>Hello! Welcome to the JS Dynamic Quiz!</h1>
 
-<h1>jQuery plugin: reverseText</h1>
-<p>This jQuery plugin reverses all the text in the selected nodes.</p>
-
-<ul>
-	<li>This text will be reversed</li>
-	<li>This text will not be reversed</li>
-	<li>reversed</li>
-	<li>not reversed</li>
-</ul>
-
-<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="js/reversetext.js"></script>
-<script type="text/javascript">
-// reverse even-numbered LI tag text
-$("ul li:even").reverseText();
-</script>
-
+        <div class="question"></div>
+        <ul class="choiceList"></ul>
+        <div class="quizMessage"></div>
+        <div class="result"></div>
+        <div class="nextButton">Next Question</div>
+        <br>
+    </div>
 </body>
 </html>
