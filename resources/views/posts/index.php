@@ -1,19 +1,43 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<title>jQuery plugin: reverseText demonstration</title>
+    <title>HTML dynamic table using JavaScript</title>
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
-<body>
-    <div class="quizContainer">
-         <h1>Hello! Welcome to the JS Dynamic Quiz!</h1>
+<body onload="load()">
+<div id="myform">
+<b>Simple form with name and age ...</b>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <td>Age:</td>
+        <td><input type="text" id="age">
+        <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+</div>
+<div id="mydata">
+<b>Current data in the system ...</b>
+<table id="myTableData"  border="1" cellpadding="2">
+    <tr>
+        <td>&nbsp;</td>
+        <td><b>Name</b></td>
+        <td><b>Age</b></td>
+    </tr>
+</table>
+&nbsp;
 
-        <div class="question"></div>
-        <ul class="choiceList"></ul>
-        <div class="quizMessage"></div>
-        <div class="result"></div>
-        <div class="nextButton">Next Question</div>
-        <br>
-    </div>
+</div>
+<div id="myDynamicTable">
+<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
+to create a Table and add some data using JavaScript
+</div>
 </body>
 </html>
