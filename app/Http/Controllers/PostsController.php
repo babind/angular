@@ -38,12 +38,12 @@ class PostsController extends Controller {
 
 		$file = array('image' => Input::file('image'));
 		// setting up rules
-		$rules = array('image' => 'required'); //mimes:jpeg,bmp,png and for max size max:10000
+		$rules = array('image' => 'required|image'); //mimes:jpeg,bmp,png and for max size max:10000
 		// doing the validation, passing post data, rules and the messages
 		$validator = Validator::make($file, $rules);
 		if ($validator->fails()) {
 			// send back to the page with the input data and errors
-			return Redirect::to('posts.create')->withInput()->withErrors($validator);
+			return Redirect::to('posts/create')->withInput()->withErrors($validator);
 		} else {
 			// checking file is valid.
 			if (Input::file('image')->isValid()) {
@@ -58,7 +58,7 @@ class PostsController extends Controller {
 			} else {
 				// sending back with error message.
 				Session::flash('error', 'uploaded file is not valid');
-				return Redirect::to('posts.create');
+				return Redirect::to('posts/create');
 			}
 		}
 	}
