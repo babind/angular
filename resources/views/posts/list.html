@@ -1,0 +1,13 @@
+<h2>list</h2>
+<div>
+	<label for="search">Search</label>
+	<input type="search" ng-model="search">
+</div>
+<ul>
+	<li ng-repeat="contact in contacts|filter:search">
+	<a href="#/contacts/{{$index}}">{{contact.name}}</a>
+	:{{contact.number}}
+	</li>
+</ul>
+
+<a href="#/add">Add new contact</a>
