@@ -1,0 +1,29 @@
+<div class="panel panel-inverse" data-sortable-id="form-validation-2">
+    <div class="panel-heading">
+        <h4 class="panel-title">Create Category</h4>
+    </div>
+
+    <div class="panel-body panel-form">
+        <form class="form-horizontal form-bordered" name="facilityForm" novalidate>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4">Name* :</label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" ng-class="getCssClasses(facilityForm.title)" type="text" id="title" name="title" ng-model="Category.name" placeholder="Title" required/>
+                    <span ng-show="showError(facilityForm.title,'required')">This title is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4">Description :</label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" type="text" id="description" name="description" ng-model="Category.description" placeholder="Description" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4"></label>
+                <div class="col-md-6 col-sm-6">
+                    <button lass="btn btn-danger" ng-click="save(Category)">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

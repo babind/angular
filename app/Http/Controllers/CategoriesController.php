@@ -26,7 +26,6 @@ class CategoriesController extends Controller
         return $this->category->all();
     }
 
-
     /**
      * Store a newly created resource in storage.
      *
