@@ -14,7 +14,7 @@ class CategoriesController extends Controller
 
     public function __construct(Category $category)
     {
-        $this->category=$category;
+        $this->category = $category;
     }
     /**
      * Display a listing of the resource.
