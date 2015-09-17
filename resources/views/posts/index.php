@@ -1,36 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Create an autocomplete input box with typeahead.js</title>
-  
-  <!-- Bootstrap CSS Toolkit styles -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <body>
-  <div class="container">
-    <p class="example-description">Prefetches data, stores it in localStorage, and searches it on the client: </p>
-    <input id="input" class="typeahead" type="text" placeholder="input a country name">
-  </div>
 
-  <!-- Load jQuery and the typeahead JS files -->
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="js/typeahead.min.js"></script>
+<div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+</div>
 
-
-  <script type="text/javascript">
-    // Waiting for the DOM ready...
-    $(function(){
-
-  $('#input').typeahead([
-{
-name: 'planets',
-local: [ "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ]
-}
-]);
-    });
-  </script>
-</body> 
+</body>
 </html>

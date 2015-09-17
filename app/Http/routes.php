@@ -1,4 +1,4 @@
-<?php
+<?php use App\jobs\RouteHelpers;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::get(RouteHelpers::DASHBOARD,array(
+	'before' =>RouteHelpers::CHECKPOINT,
+	'uses'  => 'HomeController@showDashboard'));
 
 Route::get('/', function () {
     return view('welcome');
