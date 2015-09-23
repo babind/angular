@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Jobs;
+
+
+
+class Timer
+ {
+
+	private $time = null;
+
+	public function __construct(Time $time )
+		{
+			$this->time = $time;	
+		}
+
+	}
+	public function timer()
+	{
+
+		$time = time();
+		$time1 = $time + (0 * 20 * 60 * 60);
+		$time3 =  $time1 - $time;
+		return $time3;
+
+	}
+	
+
+}
