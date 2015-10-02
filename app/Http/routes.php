@@ -17,7 +17,8 @@ Route::get('/', function () {
 Route::resource('posts','PostsController');
 Route::resource('categories', 'CategoriesController');
 
-App::bind('Acme\Billing\BillingInterface','Acme\Billing\StripeBilling');
+App::bind('App\Acme\Billing\BillingInterface','App\Acme\Billing\StripeBilling');
+
 Route::get('buy',function()
 {
 	return view('buy');
@@ -25,7 +26,7 @@ Route::get('buy',function()
 
 Route::post('buy',function()
 {
-	$billing = App::make('Acme\Billing\BillingInterface');
+	$billing = App::make('App\Acme\Billing\BillingInterface');
  return 	$billing->charge([
 		'email'=>Input::get('email'),
 		'token'=>Input::get('token')

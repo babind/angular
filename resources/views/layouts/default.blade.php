@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
+	
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+       	<meta name="publishable-key" content="{{ Config::get('stripe.stripe.public')}}">
     </head>
     <body>
    
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+   @if(Session::has('flas_message'))
+   	<div class="flash_message">
+		
+		{!!Session::get('flas_message')!!}
+		</div>
+	@endif
+
+   	<div class="container">
 
    	@yield('content')
-	
-       
-        <script>
+   	</div>
+   	
+{{-- 
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+     --}}
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+   	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
+   	<script src="https://js.stripe.com/v2/"></script>
+   	<script src="js/billing.js"></script>
+        	
         
-        </script>
+	
+	@yield('footer')
     </body>
 </html>

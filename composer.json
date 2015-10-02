@@ -29,6 +29,9 @@
             "App\\": "app/"
         }
     },
+    "files": [
+        "app/Acme/Billing/StripeBilling.php"
+    ],
     "autoload-dev": {
         "classmap": [
             "tests/TestCase.php"

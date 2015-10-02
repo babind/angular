@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5efb0352c1540b106495dc5067df1c25",
+    "hash": "cd1d9639477522200a4b9457bbc9a8d2",
     "content-hash": "f7bbeb478350a9f4c4083ebb263ef73e",
     "packages": [
         {
@@ -731,16 +731,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.18",
+            "version": "v5.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2703f4b395631fd3a2165ad74074d3531acfeccf"
+                "reference": "45e181369991579dc3ad015665eabbb72c0fadba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2703f4b395631fd3a2165ad74074d3531acfeccf",
-                "reference": "2703f4b395631fd3a2165ad74074d3531acfeccf",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/45e181369991579dc3ad015665eabbb72c0fadba",
+                "reference": "45e181369991579dc3ad015665eabbb72c0fadba",
                 "shasum": ""
             },
             "require": {
@@ -855,7 +855,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-09-30 20:42:12"
+            "time": "2015-10-01 18:32:48"
         },
         {
             "name": "laravel/socialite",
@@ -3132,16 +3132,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.7",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
@@ -3184,7 +3184,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-19 09:14:08"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "sebastian/comparator",

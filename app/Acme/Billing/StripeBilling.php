@@ -1,29 +1,35 @@
-<?php namespace Acme\Billing;
+<?php namespace  App\Acme\Billing;
 
-class StripeBilling implements BillingInterface 
+
+use Stripe\Stripe;
+use Stripe\Charge;
+use Stripe_CardError;
+use Config;
+use Input;
+// use \Stripe\Stripe as Stripe;
+// use \Config as Config;
+// //use \Stripe_Charge as Stripe_Charge;
+
+class StripeBilling implements BillingInterface
 {
+    
+    public function __construct() {
+        Stripe::setApiKey(Config::get('stripe.stripe.secret'));
+    }
+    
+    public function charge(array $data) {
+        try {
 
-	public function __construct()
-	{
-	 	Stripe::setApiKey(Config::get('stripe.secret_key'));
-	}
+            return Charge::create(['amount' =>Input::get('amount'), 'currency' => 'usd', 'description' => $data['email'], 
+                //'card' =>
+                 'card' => Input::get('stripeToken')  ]);
 
-	public function charge(array $data)
-	{
-	 	try
-	 	{
-
-		 return 	Stripe_Charge::create([
-		 		'amount' =>1000,
-		 		'currency' =>'usd',
-		 		'description' =>$data['email'],
-		 		'card'=>$data['token']
-		 	]);
-	 	}catch(Stripe_CardError $e)
-	 	{
-	 		dd('card was declined');
-	 	}
-            }
+                 //, $data['stripeToken'
+                 //]
+                       }
+        catch(Stripe_CardError $e) {
+            dd('card was declined');
+        }
+    }
 }
-
 ?>
