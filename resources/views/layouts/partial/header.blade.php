@@ -7,14 +7,14 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">Title</a>
+		<a class="navbar-brand" href="#">Worked</a>
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
+			<li class="active"><a href="#">Profile</a></li>
+			<li><a href="#">Business</a></li>
 		</ul>
 		<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
@@ -23,14 +23,14 @@
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Link</a></li>
+			<li><a href="#">Jobs</a></li>
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal Information<b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li><a href="#">Separated link</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Notification</a></li>
+					<li><a href="#">Message</a></li>
+					<li><a href="#">Updates</a></li>
 				</ul>
 			</li>
 		</ul>

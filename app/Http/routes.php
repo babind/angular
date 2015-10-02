@@ -16,3 +16,18 @@ Route::get('/', function () {
 
 Route::resource('posts','PostsController');
 Route::resource('categories', 'CategoriesController');
+
+App::bind('Acme\Billing\BillingInterface','Acme\Billing\StripeBilling');
+Route::get('buy',function()
+{
+	return view('buy');
+});
+
+Route::post('buy',function()
+{
+	$billing = App::make('Acme\Billing\BillingInterface');
+ return 	$billing->charge([
+		'email'=>Input::get('email'),
+		'token'=>Input::get('token')
+		]);
+});
