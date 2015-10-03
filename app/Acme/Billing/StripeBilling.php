@@ -6,9 +6,7 @@ use Stripe\Charge;
 use Stripe_CardError;
 use Config;
 use Input;
-// use \Stripe\Stripe as Stripe;
-// use \Config as Config;
-// //use \Stripe_Charge as Stripe_Charge;
+
 
 class StripeBilling implements BillingInterface
 {

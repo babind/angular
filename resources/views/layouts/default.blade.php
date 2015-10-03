@@ -4,6 +4,10 @@
     <head>
         <meta charset="utf-8">
        	<meta name="publishable-key" content="{{ Config::get('stripe.stripe.public')}}">
+        
+        <link rel='stylesheet', href="css/bootstrap.min.css">
+            
+          </style>
     </head>
     <body>
    
