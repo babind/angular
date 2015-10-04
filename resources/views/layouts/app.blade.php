@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
 	<meta charset="utf-8" />
 	<title>Color Admin | Page with Mega Menu</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/custom.css">
 </head>
-<body>
+<body  ng-controller="TodosController">
     <div class="main-container">
 	<div class="container-fixed">
                         <div class="header">
@@ -22,12 +22,15 @@
 
                             <div class="col-md-9">
                                     <div class="container-fixed"> 
-                                        <div class="ng-app">
-
-                                                <div class="ng-view">
-                                                    @yield('content')                        
-
-                                                </div>
+                                        <div class="custom">
+                                              
+                                                <h1>Todos</h1>
+                                                <ul>
+                                                    <li ng-repeat="todo in todos">@{!!todo.body!!}  </li>
+                                                    
+                                                </ul>
+                                                
+                                             
                                         </div>
                                     </div>
                               </div>  
@@ -38,14 +41,17 @@
                     </div>
             </div>
         </div>
+
+{{-- 
             <script src="/js/jquery.js"></script>
             <script src="/js/bootstrap.min.js"></script>
 
-        <script src="/js/angular.min.js"></script> 
-        <script src="/js/angular-route.min.js"></script>	       
-        <script src="/app/src/app.js"></script>
+ --}}
 
-           
+        <script src="/js/angular.min.js"></script> 
+        <script src="/js/angular-route.min.js"></script>	  
+          <script src="/js/main.js"></script>       
+
 </body>
 
 
