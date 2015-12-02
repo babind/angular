@@ -39,4 +39,10 @@ return [
     'client_secret' => 'your-github-app-secret',
     'redirect' => 'http://your-callback-url',
     ],
+
+    'facebook' => [
+        'client_id' => '911601942227142',
+        'client_secret' => '00a9f951fc8ca3aafcd22701720fe5ab',
+        'redirect' => 'http://localhost:8000'.'/login/facebook/callback',
+    ],
 ];

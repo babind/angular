@@ -2,33 +2,27 @@
 	<div class="panel heading">
 		<h4 class="panel-title">Update Category</h4>
 	</div>
-
-<div class="panel-body panel-form">
-	<form class="form-horizontal form-bordered" name="facilityForm" novalidate>
-		<div class="form-group">
-			<label class="">Name:</label>
-			<div class="col-md-6 col-sm-6">
-				<input class="form-control" ng-class="getCssClasses(facilityForm.title)" type="title" name="title" ng-model="category.name" placeholder="title" required/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label col-md-4 col-sm-4">Description :</label>
-			<div class="form-control" type="text" name="description" nd-model="category.description" placeholder="Description"/>
-			</div>
-			<div class="form-group">
-				<label class="control-label col-md-4 col-sm-4"></label>
-				<div class="col-md-6 col-sm-6">
-					<button class="btn btn-danger" ng-click="update(category)">Update</button>
-			</div>
-
-		</div>
-
-
-	</form>
-	</div>
-	</div>
-	
-
-
-
+ <div class="panel-body panel-form">
+        <form class="form-horizontal form-bordered" name="facilityForm" novalidate>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4">Name* :</label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" ng-class="getCssClasses(facilityForm.title)" type="text" id="title" name="title" ng-model="Category.name" placeholder="Title" required/>
+                    <span ng-show="showError(facilityForm.title,'required')">This title is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4">Description :</label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" type="text" id="description" name="description" ng-model="Category.description" placeholder="Description" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4 col-sm-4"></label>
+                <div class="col-md-6 col-sm-6">
+                    <button lass="btn btn-danger" ng-click="update(Category)">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>	
 </div>

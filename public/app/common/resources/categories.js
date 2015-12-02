@@ -5,6 +5,7 @@ angular.module('resources.categories',['ngResource','ngRoute']).factory('Categor
 		update: {
 			method:'PUT',
 			transformResponse:function(data,headerFn){
+				return JSON.parse(data);
 
 			}
 		}

@@ -17,18 +17,16 @@ Route::get('/', function () {
 Route::resource('posts','PostsController');
 Route::resource('categories', 'CategoriesController');
 
-App::bind('App\Acme\Billing\BillingInterface','App\Acme\Billing\StripeBilling');
+Route::get('auth/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@getLogin']);
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('buy',function()
-{
-	return view('buy');
-});
+// Registration routes.
 
-Route::post('buy',function()
-{
-	$billing = App::make('App\Acme\Billing\BillingInterface');
- return 	$billing->charge([
-		'email'=>Input::get('email'),
-		'token'=>Input::get('token')
-		]);
-});
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Socialite routes.
+//
+Route::get('login/{provider?}', 'Auth\AuthController@redirectToProvider');
+Route::get('login/{provider?}/callback', 'Auth\AuthController@handleProviderCallback');

@@ -32,6 +32,11 @@ class CategoriesController extends Controller
      * @param  Request  $request
      * @return Response
      */
+
+    public function create()
+    {
+        return view('categories.create');
+    }
     public function store(Request $request)
     {
         return $this->category->create($request->input('data'));

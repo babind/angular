@@ -31,7 +31,11 @@
    	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
    	<script src="https://js.stripe.com/v2/"></script>
    	<script src="js/billing.js"></script>
-        	
+        	<script>
+              $(document).ready(function() {
+                App.init();
+              });
+            </script>
         
 	
 	@yield('footer')

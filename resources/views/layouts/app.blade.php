@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title>Color Admin | Page with Mega Menu</title>
@@ -8,8 +8,18 @@
 	<meta content="" name="author" />
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/custom.css">
-</head>
-<body  ng-controller="TodosController">
+         <script src="/js/jquery.js"></script>
+         <script src="/js/angular.min.js"></script> 
+          <script src="/js/moment.min.js"></script>
+           <script src="/js/angular-route.min.js"></script>
+         <script src="/js/angular-resource.min.js"></script> 
+          <script src="/app/src/admin.js"></script>
+          <script src="/app/src/categories/categories.js"></script>
+          <script src="/app/common/resources/categories.js"></script>
+          <script src="/app/src/app.js"></script>
+          
+    </head>
+<body>
     <div class="main-container">
 	<div class="container-fixed">
                         <div class="header">
@@ -23,14 +33,11 @@
                             <div class="col-md-9">
                                     <div class="container-fixed"> 
                                         <div class="custom">
-                                              
-                                                <h1>Todos</h1>
-                                                <ul>
-                                                    <li ng-repeat="todo in todos">@{!!todo.body!!}  </li>
-                                                    
-                                                </ul>
+                                              <div  ng-app="app">
+                                              <div ng-view>
                                                 
-                                             
+                                              </div>
+                                              </div>    
                                         </div>
                                     </div>
                               </div>  
@@ -41,16 +48,16 @@
                     </div>
             </div>
         </div>
+<script type="text/javascript">
+        var configData={
+            baseUrl:'{{url()}}'
+        }
 
-{{-- 
-            <script src="/js/jquery.js"></script>
-            <script src="/js/bootstrap.min.js"></script>
+    </script>
+     
 
- --}}
+   
 
-        <script src="/js/angular.min.js"></script> 
-        <script src="/js/angular-route.min.js"></script>	  
-          <script src="/js/main.js"></script>       
 
 </body>
 

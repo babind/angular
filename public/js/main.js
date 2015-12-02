@@ -1,6 +1,7 @@
-function TodosController($scope) {
-	$scope.todos = [
-	{body: 'go to store' },
-	{ body: 'Finish video' }
-	];
-}
+  var app = angular.module('myApp', []);
+    app.controller('TodosController', function($scope) {
+        $scope.todos = [
+            { body: 'Go to store' },
+            { body: 'Finish video' }
+        ];
+    });
